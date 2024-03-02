@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Postres API</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Josefin Sans-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+        <!--Sirarcha-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+        <!--Onest-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Onest&display=swap" rel="stylesheet">
+        <!--lato-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="shortcut icon" href="./imagenes/icono.png" />
+        <script src="./javascript/mostrar.js"></script>
+    </head>
+    <body>
+      <header>
+        <img src="./imagenes/iconoTitulo3.png" alt="Logo">
+        <h1>Postres API</h1>  
+        <img src="./imagenes/iconoTitulo3.png" alt="Logo">
+      </header>
+      <h3>Nota: si desea cambiar o eliminar un postre debera utilizar postman</h3>
+        <div class="container">
+            
+            <section>
+              <img src="./imagenes/imagenlateral.jpg" alt="Imagen">
+              <div class="content">
+                <h2>¿Qué hace la API?</h2>
+                <p>La API permite ver postres e ingresar postres.</p>
+              </div>
+              <div class="content">
+                <h2>¿Qué muestra?</h2>
+                <p>Debe mostrar el nombre del postre, las porciones, el tiempo y una descripción.</p>
+              </div>
+            </section>
+            <br>
+            <div class="table-container">
+              <h4>Tabla de postres</h4>
+              <table id="postresT">
+                <thead>
+                  <tr>
+                    <th>Nombre Postre</th>
+                    <th>Tipo</th>
+                    <th>Porciones</th>
+                    <th>Tiempo (minutos)</th>
+                    <th>Ingredientes Secos</th>
+                    <th>Ingredientes líquidos</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <br>
+            <div class="form-container">
+              <h4>Ingresa un postre</h4>
+              <form id="postreForm"  method="POST">
+                <input type="text" name="nombrePostre" placeholder="Nombre" />
+                <select id="select">
+                  <option value="niguno">Seleccionar Tipo</option>
+                  <option value="pays">pays</option>
+                  <option value="pasteles">pasteles</option>
+                  <option value="helados">paletas</option>
+                  <option value="horneados">horneados</option>
+                  <option value="pan_dulce">pan de dulce</option>
+                  <option value="gelatina">gelatina</option>
+                  <option value="sarten">de sarten</option>
+                </select>
+                <input type="number" name="porciones" placeholder="Porciones" />
+                <input type="number" name="tiempo" placeholder="Tiempo (minutos)" />
+                <input type="text" name="ing_sec" placeholder="Ingredientes Secos" />
+                <input type="text" name="ing_liq" placeholder="Ingredientes Líquidos" />
+                <input type="text" name="descripcion" placeholder="Descripción" />
+                <button type="submit">Registrar</button><br><br>
+                <button type="button" onclick="borrarRegistros()">Borrar</button>
+              </form>
+            </div>
+          </div>
+    <footer>  
+      Derechos de autor © 2023 Isabel Beatriz Franco Díaz. Todos los derechos reservados. Instituto Tecnologico de Chihuahua II
+    </footer>
+    <!--MOSTRAR-->
+    <!--AGREGAR-->
+    <script src="./javascript/agregar.js"></script>
+    </body>
+</html>

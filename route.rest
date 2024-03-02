@@ -1,0 +1,33 @@
+###Iniciacion - si funciona
+GET http://localhost:3000/postres
+
+### Seleccionar uno - si funciona
+GET http://localhost:3000/postres/656b7540f1daf657e9e9d06f
+
+
+###Ingresar uno - si funciona
+POST http://localhost:3000/postres
+Content-Type: application/json
+
+{
+    "nombrePostre": "Pay de Manzana",
+    "tipo": "pay", 
+    "porciones": 8,
+    "tiempo":  30,
+    "ing_liq": "harina, sal, canela, nuez moscada",
+    "ing_sec": "limon, agua fria, mantequilla fria, manzanas verdes, limon",
+    "descripcion": "Pay crujiente con un relleno de manzanas dulces y canela, horneado hasta que esté dorado"
+
+}
+
+###
+DELETE http://localhost:3000/postres/656fa73aa7f48bc07ab4b001
+
+
+###Actualizar uno - si funciona
+PATCH http://localhost:3000/postres/656fa73aa7f48bc07ab4b001
+Content-Type: application/json
+
+{
+    "nombrePostre": "Pastel de chocolate Bruce"
+}
